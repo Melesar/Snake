@@ -35,7 +35,6 @@ def main():
     move_direction = (0, -1)
 
     is_playing = True
-    ate_food = False
     clock = pygame.time.Clock()
     deltaTime = 0.0
     move_interval = default_move_interval
@@ -51,15 +50,11 @@ def main():
 
         move_timer -= deltaTime
         if move_timer <= 0:
-            tail = snake[len(snake) - 1]
             move_snake(snake, move_direction)
-            if ate_food:
-                snake.append(tail)
-                ate_food = False
-            if snake[0] == food_position:
-                ate_food = True
-                food_position = randomize_food_position(snake)
-            move_timer = move_interval
+            # ============= TASK #5 =================
+            # Consume food. We need to check if we have reached the food and consume it if so. 
+            # As a result, the snake should get bigger. To achieve this, add an element to the end of 
+            # the snake list. It will make it one segment bigger
 
         if move_interval > min_move_interval:
             speed_increase_timer -= deltaTime
