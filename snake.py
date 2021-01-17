@@ -118,12 +118,9 @@ def draw_grid(screen):
             
 
 def move_snake(snake, move_direction):
-    for index in range(len(snake) - 1, -1, -1):
-        if index > 0:
-            snake[index] = snake[index - 1]
-        else:
-            pos = snake[index]
-            snake[index] = (pos[0] + move_direction[0], pos[1] + move_direction[1])
+    # =============== TASK # 1 ===================
+    # Implement snake movement.
+    pass
 
 def randomize_food_position(snake):
     cells = []
