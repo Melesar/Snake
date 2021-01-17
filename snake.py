@@ -38,9 +38,7 @@ def main():
     clock = pygame.time.Clock()
     deltaTime = 0.0
     move_interval = default_move_interval
-    speed_increase = 0
     move_timer = move_interval
-    speed_increase_timer = speed_increase_interval
     while is_playing:
         screen.fill(background_color)
         draw_snake(screen, snake_segment, snake)
@@ -57,13 +55,8 @@ def main():
             # the snake list. It will make it one segment bigger
 
         if move_interval > min_move_interval:
-            speed_increase_timer -= deltaTime
-            if speed_increase_timer <= 0:
-                speed_increase += speed_increase_amount
-                move_interval = (1 - speed_increase) * default_move_interval
-                if move_interval < min_move_interval:
-                    move_interval = min_move_interval
-                speed_increase_timer = speed_increase_interval
+            # Difficulty growth
+            pass
 
         if check_game_over(snake):
             snake = [(grid_width / 2, grid_height / 2)]
