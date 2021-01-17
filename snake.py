@@ -82,14 +82,11 @@ def main():
                 is_playing = False
             if event.type == pygame.KEYDOWN:
                 key = pygame.key.name(event.key)
-                if key == 'w' and move_direction[1] == 0:
-                    move_direction = (0, -1)
-                elif key == 's' and move_direction[1] == 0:
-                    move_direction = (0, 1)
-                elif key == 'a' and move_direction[0] == 0:
-                    move_direction = (-1, 0)
-                elif key == 'd' and move_direction[0] == 0:
-                    move_direction = (1, 0)
+                # ================== TASK # 2 =====================
+                # Make the snake react to the WASD input.
+                # The goal here is to set move_direction variable according to the keyboard input.
+                # key variable holds the name of the key that was pressed, for example 'w', 'a', 's' or 'd'.
+                # So if 'w' is pressed, the move_direction should be (0, -1), if a then (-1, 0) and so on
 
         deltaTime = clock.tick() / 1000
     
