@@ -31,7 +31,7 @@ def main():
     food = pygame.Surface((food_size, food_size))
     food.fill(food_color)
 
-    food_position = (grid_width / 2, grid_height / 5)
+    food_position = randomize_food_position(snake)
     move_direction = (0, -1)
 
     is_playing = True
