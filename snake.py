@@ -126,9 +126,9 @@ def randomize_food_position(snake):
     # ============== TASK # 4 ====================
     # Spawn the food in the random position. This function needs to return a tuple (x, y) that
     # will show the position of the food on the grid.
-    # Right now it returns a fixed position, but we need to make it pick a random position where 
+    # Right now it always returns the same position, but we need to make it pick a random position where 
     # there is no snake
-    return (grid_width / 2, grid_height / 2)
+    return (grid_width / 2, grid_height / 6)
 
 def check_game_over(snake):
     # ============= TASK #2 ======================
