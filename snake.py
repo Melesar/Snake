@@ -123,13 +123,12 @@ def move_snake(snake, move_direction):
     pass
 
 def randomize_food_position(snake):
-    cells = []
-    for x in range(grid_width):
-        for y in range(grid_height):
-            if (x, y) not in snake:
-                cells.append((x, y))
-
-    return random.choice(cells)
+    # ============== TASk # 3 ====================
+    # Spawn the food in the random position. This function needs to return a tuple (x, y) that
+    # will show the position of the food on the grid.
+    # Right now it returns a fixed position, but we need to make it pick a random position where 
+    # there is no snake
+    return (grid_width / 2, grid_height / 2)
 
 def check_game_over(snake):
     head = snake[0]
