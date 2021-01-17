@@ -119,7 +119,10 @@ def draw_grid(screen):
 
 def move_snake(snake, move_direction):
     # =============== TASK # 1 ===================
-    # Implement snake movement.
+    # Make snake move in the given direction
+    # move_direction variable is a tuple (x, y) which holds the number of cells that we need to move
+    # along each axis. For example if move_direction is equals to (0, -1), it means that the snake
+    # needs to move one cell up and 0 cells to the side
     pass
 
 def randomize_food_position(snake):
