@@ -82,7 +82,7 @@ def main():
                 is_playing = False
             if event.type == pygame.KEYDOWN:
                 key = pygame.key.name(event.key)
-                # ================== TASK # 2 =====================
+                # ================== TASK # 3 =====================
                 # Make the snake react to the WASD input.
                 # The goal here is to set move_direction variable according to the keyboard input.
                 # key variable holds the name of the key that was pressed, for example 'w', 'a', 's' or 'd'.
@@ -123,7 +123,7 @@ def move_snake(snake, move_direction):
     pass
 
 def randomize_food_position(snake):
-    # ============== TASk # 3 ====================
+    # ============== TASK # 4 ====================
     # Spawn the food in the random position. This function needs to return a tuple (x, y) that
     # will show the position of the food on the grid.
     # Right now it returns a fixed position, but we need to make it pick a random position where 
@@ -131,13 +131,8 @@ def randomize_food_position(snake):
     return (grid_width / 2, grid_height / 2)
 
 def check_game_over(snake):
-    head = snake[0]
-    if head[0] >= grid_width or head[0] < 0 or head[1] >= grid_height or head[1] < 0:
-        return True
-
-    for index in range(1, len(snake)):
-        if head == snake[index]:
-            return True
+    # ============= TASK #2 ======================
+    # Check if the snake collided with the screen border. If it did, return True. If didn't return False
     return False
 
 if __name__ == "__main__":
